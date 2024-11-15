@@ -4,9 +4,13 @@ const PORT = 3000
 
 const cors = require("cors")
 
+const courseRouter = require("./routes/courseRoute")
+
 app.use(cors({
     origin: "http://localhost:3001"
 }))
+
+app.use('/courses', courseRouter)
 
 app.use(express.json())
 
